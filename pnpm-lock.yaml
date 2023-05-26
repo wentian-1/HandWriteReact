@@ -17,6 +17,7 @@ importers:
       husky: ^8.0.3
       lint-staged: ^13.2.2
       prettier: ^2.8.8
+      rollup: ^3.23.0
       typescript: ^5.0.4
     devDependencies:
       '@commitlint/cli': 17.6.3
@@ -32,6 +33,7 @@ importers:
       husky: 8.0.3
       lint-staged: 13.2.2
       prettier: 2.8.8
+      rollup: 3.23.0
       typescript: 5.0.4
 
 packages:
@@ -1011,6 +1013,14 @@ packages:
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
 
+  /rollup/3.23.0:
+    resolution: {integrity: sha512-h31UlwEi7FHihLe1zbk+3Q7z1k/84rb9BSwmBSr/XjOCEaBJ2YyedQDuM0t/kfOS0IxM+vk1/zI9XxYj9V+NJQ==}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: r2.cnpmjs.org/fsevents/2.3.2
+    dev: true
+
   /rxjs/7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
@@ -1867,6 +1877,16 @@ packages:
     name: fs.realpath
     version: 1.0.0
     dev: true
+
+  r2.cnpmjs.org/fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/fsevents/-/fsevents-2.3.2.tgz}
+    name: fsevents
+    version: 2.3.2
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   r2.cnpmjs.org/function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==, registry: https://r.cnpmjs.org/, tarball: https://r2.cnpmjs.org/function-bind/-/function-bind-1.1.1.tgz}
