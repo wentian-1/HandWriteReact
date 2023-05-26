@@ -1,0 +1,3 @@
+packages:
+# 表示packages下面的直接子级就是一个个项目
+  - 'packages/*'
