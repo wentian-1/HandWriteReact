@@ -39,17 +39,16 @@ export const jsx = (type: TElementType, config: any, ...args: any[]) => {
 	const props: TProps = {};
 
 	for (const prop in config) {
-		if (Object.prototype.hasOwnProperty.call(config, prop)) {
-			const element = config[prop];
-			if (prop === 'key' && element !== undefined) {
-				key = '' + element;
-				continue;
-			}
-			if (prop === 'ref' && element !== undefined) {
-				ref = element;
-				continue;
-			}
+		const element = config[prop];
+		if (prop === 'key' && element !== undefined) {
+			key = '' + element;
+			continue;
 		}
+		if (prop === 'ref' && element !== undefined) {
+			ref = element;
+			continue;
+		}
+		if ({}.hasOwnProperty.call(config, prop)) props[prop] = element;
 	}
 
 	const argsLen = args.length;
@@ -64,4 +63,22 @@ export const jsx = (type: TElementType, config: any, ...args: any[]) => {
 	return ReactElement(type, key, ref, props);
 };
 
-export const jsxDev = jsx;
+export const jsxDev = (type: TElementType, config: any) => {
+	let key: TKey = null;
+	let ref: TRef = null;
+	const props: TProps = {};
+
+	for (const prop in config) {
+		const element = config[prop];
+		if (prop === 'key' && element !== undefined) {
+			key = '' + element;
+			continue;
+		}
+		if (prop === 'ref' && element !== undefined) {
+			ref = element;
+			continue;
+		}
+		if ({}.hasOwnProperty.call(config, prop)) props[prop] = element;
+	}
+	return ReactElement(type, key, ref, props);
+};

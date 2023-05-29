@@ -1,7 +1,7 @@
 {
 	"name": "react",
 	"version": "1.0.0",
-	"description": "React公用方法",
+	"description": "React",
 	"module": "index.ts",
 	"dependencies": {
 		"shared": "workspace/*"

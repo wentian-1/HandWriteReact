@@ -11,7 +11,7 @@ export default [
 		output: [
 			{
 				file: `${distPath}/index.js`,
-				name: 'demo',
+				name: 'react',
 				format: 'umd'
 			}
 		],
@@ -27,5 +27,21 @@ export default [
 				})
 			})
 		]
+	},
+	{
+		input: `${basePath}/src/jsx.ts`,
+		output: [
+			{
+				file: `${distPath}/jsx-dev-runtime.js`,
+				name: 'jsxDEV',
+				format: 'umd'
+			},
+			{
+				file: `${distPath}/jsx-runtime.js`,
+				name: 'jsx',
+				format: 'umd'
+			}
+		],
+		plugins: getBasePlugins()
 	}
 ];
